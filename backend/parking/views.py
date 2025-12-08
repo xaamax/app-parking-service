@@ -1,4 +1,4 @@
-from rest_framework.permissions import DjangoModelPermissions, IsAdminUser
+from rest_framework.permissions import DjangoModelPermissions
 from rest_framework import viewsets
 from core.permissions import IsOwnerOfVehicleOrRecord
 from parking.filters import ParkingSpotFilterClass, ParkingRecordFilterClass
