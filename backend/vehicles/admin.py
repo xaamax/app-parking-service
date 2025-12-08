@@ -17,6 +17,6 @@ class VehicleBrandAdmin(admin.ModelAdmin):
 
 @admin.register(Vehicle)
 class VehicleAdmin(admin.ModelAdmin):
-    list_display = ['lincense_plate', 'vehicle_brand', 'model', 'color']
-    search_fields = ['lincense_plate', 'vehicle_brand', 'model']
+    list_display = ['license_plate', 'vehicle_brand', 'model', 'color']
+    search_fields = ['license_plate', 'vehicle_brand', 'model']
     list_filter = ['vehicle_type']

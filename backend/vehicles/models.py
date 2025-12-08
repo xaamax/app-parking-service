@@ -31,7 +31,7 @@ class VehicleType(models.Model):
 
 class Vehicle(models.Model):
     vehicle_type = models.ForeignKey(VehicleType, on_delete=models.PROTECT, blank=True, null=True, related_name='vehicles', verbose_name='Tipo do veículo')
-    lincense_plate = models.CharField(max_length=10, unique=True, verbose_name='Placa')
+    license_plate = models.CharField(max_length=10, unique=True, verbose_name='Placa')
     vehicle_brand = models.ForeignKey(VehicleBrand, on_delete=models.PROTECT, blank=True, null=True, related_name='vehicles', verbose_name='Marca do veículo')
     model = models.CharField(max_length=50, blank=True, null=True, verbose_name='Modelo')
     color = models.CharField(max_length=50, blank=True, null=True, verbose_name='Cor')
@@ -44,4 +44,4 @@ class Vehicle(models.Model):
         verbose_name_plural = 'Veículos'
 
     def __str__(self):
-        return self.lincense_plate
+        return self.license_plate
