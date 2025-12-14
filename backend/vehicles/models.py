@@ -3,7 +3,7 @@ from customers.models import Customer
 
 
 class VehicleBrand(models.Model):
-    brand = models.CharField(max_length=50, blank=True, null=True, verbose_name='Marca')
+    brand = models.CharField(max_length=50, blank=True, unique=True, null=True, verbose_name='Marca')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Criado em')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Alterado em')
 

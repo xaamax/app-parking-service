@@ -232,5 +232,6 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'Gestão de estacionamento',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS
 }
+
+CELERY_BROKER_URL = 'amqp://guest:guest@rabbitmq:5672//'
